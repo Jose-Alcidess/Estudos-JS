@@ -1,0 +1,126 @@
+/* style.css */
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #004aad;
+  padding: 20px;
+  color: white;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+.search-cart {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.banner {
+  position: relative;
+  overflow: hidden;
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+  z-index: 1;
+}
+
+.banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('big.jpeg'); /* ajuste o caminho da imagem */
+  background-size: cover;
+  background-position: center;
+  filter: blur(8px);
+  transform: scale(1.05);
+  z-index: -2;
+}
+
+.banner::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4); /* overlay escuro */
+  z-index: -1;
+}
+
+.banner h1,
+.banner p,
+.banner .cta {
+  position: relative;
+  z-index: 1;
+}
+
+.cta {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #ff9800;
+  color: white;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.produtos {
+  padding: 40px 20px;
+}
+
+.grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  padding: 15px;
+  text-align: center;
+}
+
+.card img {
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+.comprar {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #004aad;
+  background-image: "./big.jpeg";
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+footer {
+  background-color: #004aad;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
